@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewIP"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/lblIP"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enter IP:"
+        android:id="@+id/lblIP"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_alignBottom="@+id/txtViewIP"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:id="@+id/btnConnect"
+        android:layout_below="@+id/txtViewIP"
+        android:layout_alignLeft="@+id/lblIP"
+        android:layout_alignStart="@+id/lblIP"
+        android:layout_marginTop="22dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shutdown"
+        android:id="@+id/btnShutdown"
+        android:layout_below="@+id/btnConnect"
+        android:layout_alignLeft="@+id/btnConnect"
+        android:layout_alignStart="@+id/btnConnect"
+        android:layout_marginTop="39dp"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pandora"
+        android:id="@+id/btnPandora"
+        android:layout_below="@+id/btnShutdown"
+        android:layout_alignLeft="@+id/btnShutdown"
+        android:layout_alignStart="@+id/btnShutdown"
+        android:layout_marginTop="35dp"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Off"
+        android:id="@+id/btnLogOff"
+        android:layout_alignBottom="@+id/btnShutdown"
+        android:layout_toRightOf="@+id/btnShutdown"
+        android:layout_toEndOf="@+id/btnShutdown"
+        android:layout_marginLeft="61dp"
+        android:layout_marginStart="61dp"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temp"
+        android:id="@+id/btnTemp"
+        android:layout_alignBottom="@+id/btnPandora"
+        android:layout_alignLeft="@+id/btnLogOff"
+        android:layout_alignStart="@+id/btnLogOff"
+        android:enabled="true" />
+</RelativeLayout>
