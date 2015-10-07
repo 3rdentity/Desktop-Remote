@@ -44,13 +44,14 @@ public class MainActivity extends ActionBarActivity {
                 InputMethodManager imm = (InputMethodManager)getSystemService(
                         Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(txtIP.getWindowToken(), 0);
-
+                String ips[]= {ip};
                 if(!txtIP.getText().toString().isEmpty()){
-
+                  String connectionStatus;
+                 ServerConnections connect = new ServerConnections();//Here is the start of the asynctask
+                    //connect.execute(ips);
+                    connectionStatus= connect.doInBackground(ips);
                     ip=txtIP.getText().toString();
                     Toast.makeText(getApplicationContext(),ip,Toast.LENGTH_SHORT).show();
-                    control= new RemoteConnection(ip);
-                    String connectionStatus=control.connect();
 
 
                     if(connectionStatus.equals("error")){

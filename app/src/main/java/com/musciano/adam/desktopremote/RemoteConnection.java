@@ -1,5 +1,6 @@
 package com.musciano.adam.desktopremote;
 
+import android.util.Log;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -34,6 +35,7 @@ public class RemoteConnection {
                 ready = false;
                 x++;
                 System.out.println("Failed Connection...");
+                Log.println(Log.DEBUG,"error",e.toString());
             }
         }
         try{
